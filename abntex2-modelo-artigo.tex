@@ -1,0 +1,368 @@
+%% abtex2-modelo-artigo.tex, v-1.9.1 laurocesar
+%% Copyright 2012-2013 by abnTeX2 group at http://abntex2.googlecode.com/ 
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is the abnTeX2 team, led
+%% by Lauro César Araujo. Further information are available on 
+%% http://abntex2.googlecode.com/
+%%
+%% This work consists of the files abntex2-modelo-artigo.tex and
+%% abntex2-modelo-references.bib
+%%
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Artigo Acadêmico em conformidade com
+% ABNT NBR 6022:2003: Informação e documentação - Artigo em publicação 
+% periódica científica impressa - Apresentação
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	article,			% indica que é um artigo acadêmico
+	11pt,				% tamanho da fonte
+	oneside,			% para impressão apenas no verso. Oposto a twoside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE % títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	sumario=tradicional
+	]{abntex2}
+
+
+% ---
+% PACOTES
+% ---
+
+% ---
+% Pacotes fundamentais 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{nomencl} 			% Lista de simbolos
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+% ---
+		
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+		
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+% ---
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\titulo{Uma Visão Ágil sobre o Processo de Desenvolvimento de Software do MPDFT}
+\autor{Marcelo Henrique de Oliveira Lima}
+\data{2014}
+\instituicao{Pós-Graduação em Gestão de TI na Administração Pública}
+\local{Brasil}
+\orientador{Renato Brown}
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={Modelo de artigo científico com abnTeX2},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{atigo científico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ---
+% Altera as margens padrões
+% ---
+\setlrmarginsandblock{4cm}{4cm}{*}
+\setulmarginsandblock{4cm}{4cm}{*}
+\checkandfixthelayout
+% ---
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% Espaçamento simples
+\SingleSpacing
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+%---
+%
+% Se desejar escrever o artigo em duas colunas, descomente a linha abaixo
+% e a linha com o texto ``FIM DE ARTIGO EM DUAS COLUNAS''.
+% \twocolumn[    		% INICIO DE ARTIGO EM DUAS COLUNAS
+%
+%---
+% página de titulo
+\maketitle
+
+% resumo em português
+\begin{resumoumacoluna}
+ \lipsum[1]
+ 
+ \vspace{\onelineskip}
+ 
+ \noindent
+ \textbf{Palavras-chaves}: Processo Unificado. MPDFT. Métodos Ágeis.
+\end{resumoumacoluna}
+
+% ]  				% FIM DE ARTIGO EM DUAS COLUNAS
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
+\section*{Introdução}
+\addcontentsline{toc}{section}{Introdução}
+
+   \lipsum[1]
+
+\section{Processo Unificado}
+
+Um processo de software é um conjunto de atividades que leva à produção de um
+produto de software \cite{sommerville2007}. O Processo Unificado (PU) para
+desenvolvimento de software surgiu como uma alternativa ao já reconhecidamente
+ineficiente modelo sequencial ou em cascata. O modelo em cascata foi o primeiro
+a ser publicado e teve forte influência dos processos mais gerais de engenharia de
+sistema \cite{sommerville2007}. Esse modelo (cascata) caracteriza-se pelo
+encadeamento das fases e pelo fato da fase seguinte não iniciar antes da atual
+ter terminado. Alguns estudos de sucesso/falha mostram que projetos que
+utilizaram o modelo em cascata obtiveram alta taxa de falha. Acredita-se que
+esse modelo ganhou forte adoção baseado em boatos e crenças ao longo dos anos
+\cite{larman2007utilizando}.
+
+Já o Processo Unificado é fortemente baseado em um modelo iterativo e
+incremental. Tal modelo já se mostrou mais eficiente em situações que os
+requisitos não estão completamente definidos e a entrega de resultados deve ser
+antecipada o máximo possível, além de reduzir a quantidade de defeitos.
+
+Colocar referências do Larman.
+
+Talvez gráfico das baleias.
+
+O PU pode ser dividido em três visões: dinâmica, estática e melhores práticas???
+
+\textbf{Disciplinas de Engenharia}
+
+\begin{enumerate}
+   \item Modelagem de Negócios
+   \item Requisitos
+   \item Análise e Projeto (Design)
+   \item Implementação
+   \item Teste
+   \item Implantação
+\end{enumerate}
+
+\textbf{Disciplinas de Apoio/Suporte}
+
+\begin{enumerate}
+   \item Ambiente
+   \item Gestão de Configuração e Mudança
+   \item Gerência de Projeto
+\end{enumerate}
+
+Falar sobre visões dinâmicas, estáticas e \ldots.
+
+Falar sobre disciplinas, workflows, itens de trabalho etc.
+
+\subsection{MPDFT-UP}
+
+Seguindo o entendimento de que não existe um processo ideal várias organizações
+desenvolveram abordagens inteiramente diferentes para o desenvolvimento de
+software \cite{sommerville2007}. O Ministério Público do Distrito Federal de
+Territórios (MPDFT) desenvolveu um processo denominado MPDFT-UP
+\cite{mpdft-up}. É um processo iterativo e incremental baseado no processo
+unificado. A utilização do PU não é tão crítica em relação a necessidades e
+pressões de mercado. Mas, por se tratar de um órgão público, é necessária
+especial atenção à documentação dos sistemas desenvolvidos, formalização de
+demandas, designação de responsáveis pelo desenvolvimento e pelos aceites.
+
+Os processos evoluíram para explorar as capacidades das pessoas em uma
+organização e as características específicas do sistemas que estão sendo
+desenvolvidos \cite{sommerville2007}.
+
+Falar sobre as visões implementadas pelo MPDFT-UP. Disciplinas, workflows etc.
+
+\textbf{Disciplinas de Engenharia}
+
+\begin{enumerate}
+   \item Requisitos
+   \item Implementação
+   \item Teste
+   \item Implantação
+   \item Homologação
+\end{enumerate}
+
+\textbf{Disciplinas de Apoio/Suporte}
+
+\begin{enumerate}
+   \item Gerência de Projeto
+\end{enumerate}
+
+   % \lipsum[1]
+
+\section{Métodos Ágeis}
+
+Por volta da década de 1990 houve um movimento envolvendo desenvolvedores que
+não concordavam com o caminho que estava sendo tomado pelos processos de
+software. A burocracia, o peso do processo em detrimento do próprio produto a
+ser desenvolvido, o foco nos artefatos que não necessariamente agregam valor,
+todos esses fatores foram motivos para a migração que leva a outro extremo, a
+redução brusca da burocracia. Tal processo foi tão extremo que levou a criação
+de um dos processos de desenvolvimento mais popular do mundo ágil, a programação
+extrema (eXtreme Programming - XP) \cite{Beck:1999:ECE:619045.621348}.
+
+Conforme citado por \citeonline{larman2007utilizando}, o PU é completamente
+adptável e aberto a boas práticas de outros metodos. A introdução do PU não
+visa diminuir o valor desses outros métodos - muito pelo contrário
+\cite{larman2007utilizando}.
+
+http://agilemanifesto.org/
+
+   % \lipsum[1]
+
+\subsection{Scrum}
+
+Scrum das trincheiras.
+
+   \lipsum[1]
+
+\section{Modelo Híbrido}
+
+Limites bem definidos entre os modelos de processos é algo muito bom do ponto de
+vista didático, mas, no mundo prático, é inviável se utilizar somente de um
+modelo de desenvolvimento de software. Conforme explicado anteriormente, os
+modelos possuem vantagens e desvantagens, o que os tornam interessantes sob
+determinadas situações. Contudo, instituições sólidas buscam uma padronização no
+modo de trabalho, pois um modo de trabalho uniforme viabiliza o aprimoramento
+dos processso de software, no qual a diversidade de processos de software ao
+longo da organização é reduzida \cite{sommerville2007}. Isso visa melhorias na
+comunicação e redução na curva de aprendizado de novos colaboradores.
+
+   % \lipsum[1]
+
+% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
+% ---
+\bookmarksetup{startatroot}% 
+% ---
+
+% ---
+% Conclusão
+% ---
+\section*{Considerações finais}
+\addcontentsline{toc}{section}{Considerações finais}
+
+\lipsum[1]
+
+\begin{citacao}
+\lipsum[2]
+\end{citacao}
+
+\lipsum[3]
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{abntex2-modelo-references}
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Há diversas soluções prontas para glossário em LaTeX. 
+% Consulte o manual do abnTeX2 para obter sugestões.
+%
+%\glossary
+
+\end{document}

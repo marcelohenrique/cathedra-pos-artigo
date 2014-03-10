@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Sun Jan 26 04:14:21 BRT 2014
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=abntex2-modelo-artigo.tex
+outputFile=abntex2-modelo-artigo.pdf
+langSpell=pt
+markDer=true
+srcDir=
