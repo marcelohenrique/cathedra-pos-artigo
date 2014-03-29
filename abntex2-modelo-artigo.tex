@@ -181,13 +181,13 @@
 
 % resumo em português
 \begin{resumoumacoluna}
- 
- \textcolor{red}{ESCREVER RESUMO!!!}
 
- \vspace{\onelineskip}
- 
- \noindent
- \textbf{Palavras-chaves}: Processo Unificado. MPDFT. Métodos Ágeis.
+   \textcolor{red}{ESCREVER RESUMO!!!}
+
+   \vspace{\onelineskip}
+
+   \noindent
+   \textbf{Palavras-chaves}: Processo Unificado. MPDFT. Métodos Ágeis.
 \end{resumoumacoluna}
 
 % ]  				% FIM DE ARTIGO EM DUAS COLUNAS
@@ -259,40 +259,90 @@ seguidas. As quatro principais fases são:
    a entrada do sistema em funcionamento no ambiente real.
 \end{description}
 
-Apesar de se parecer um pouco com o modelo cascata as fases do PU não coincidem
+Apesar das fases do PU se parecerem com as do modelo cascata elas não coincidem
 com as atividades do processo e estão mais estritamente ligadas ao negócio do
 que a assuntos técnicos \cite{sommerville2007}. Outra característica marcante
 da estrutura de fases do PU é que elas podem se sobrepor ao longo do
-desenvolvimento, enquanto no modelo tradicional uma fase não inicia antes da finalização da fase atual.
+desenvolvimento, enquanto no modelo tradicional uma fase não inicia antes da
+finalização da fase atual.
 
-Colocar referências do Larman.
-
-Talvez gráfico das baleias.
-
-O PU pode ser dividido em três visões: dinâmica, estática e melhores práticas???
+Outra perspectiva, a estática, é organizada em disciplinas ou fluxos de trabalho
+(\textit{workflows}). Uma disciplina é uma sequência de atividades que produz um
+resultado de valor observável \cite{Corporation1998}. Por isso a disciplina é a
+parte do processo responsável por uma das quatro perguntas básicas de um
+processo (quem, o quê, como e quando), o quando. É a disciplina que faz com que
+as outras perguntas sejam respondidas no momento adequado do ciclo de vida do
+processo. O PU possui nove disciplinas núcleo, seis agrupadas com o título de
+engenharia e outras três sob o título de suporte.
 
 \textbf{Disciplinas de Engenharia}
 
-\begin{enumerate}
-   \item Modelagem de Negócios
-   \item Requisitos
-   \item Análise e Projeto (Design)
-   \item Implementação
-   \item Teste
-   \item Implantação
-\end{enumerate}
+\begin{description}
+   \item[1. Modelagem de negócios] - Os processos de negócios são modelados
+   usando casos de uso de negócios.
+   \item[2. Requisitos] - Os agentes que interagem com o sistema são
+   identificados e os casos de uso são desenvolvidos para modelar os requisitos de sistema.
+   \item[3. Análise e projeto (design)] - Um modelo de projeto é criado e
+   documentado usando modelos de arquitetura, modelos de componente, modelos de
+   objeto e modelos de sequência.
+   \item[4. Implementação] - Os componentes de sistema são implementados e
+   estruturados em subsistemas de implementação.
+   \item[5. Teste] - O teste é um processo iterativo realizados em conjunto com
+   a implementação.
+   \item[6. Implantação] - Uma versão do produto é criada, distribuída aos
+   usuários e instalada no local de trabalho.
+\end{description}
 
 \textbf{Disciplinas de Apoio/Suporte}
 
-\begin{enumerate}
-   \item Ambiente
-   \item Gestão de Configuração e Mudança
-   \item Gerência de Projeto
-\end{enumerate}
+\begin{description}
+   \item[1. Gestão de Configuração e Mudança] - Disciplina responsável por
+   gerenciar as mudanças do sistema.
+   \item[2. Gerência de Projeto] - Disciplina que gerencia o desenvolvimento do
+   sistema.
+   \item[3. Ambiente] - Disciplina relacionada à disponibilização de ferramentas
+   apropriadas de software para a equipe de desenvolvimento.
+\end{description}
 
-Falar sobre visões dinâmicas, estáticas e \ldots.
+A terceira perspectiva do Processo Unificado é a prática, que descreve boas
+práticas de engenharia de software recomendadas para uso em desenvolvimento de
+sistemas \cite{sommerville2007}. São seis:
 
-Falar sobre disciplinas, workflows, itens de trabalho etc.
+\begin{description}
+   \item[1. Desenvolver software iterativamente] - Planejar os incrementos de
+   software com base nas prioridades do cliente e desenvolver e entregar antes
+   as características de sistema de maior prioridade no processo de
+   desenvolvimento.
+   \item[2. Gerenciar requisitos] - Documentar explicitamente os requisitos do
+   cliente e manter acompanhamento das mudanças desses requisitos.
+   \item[3. Usar arquiteturas baseadas em componentes] - Estruturar a
+   arquitetura de sistemas com componentes.
+   \item[4. Modelar o software visualmente] - Usar modelos gráficos de UML para
+   apresentar as visões estática e dinâmicas do software.
+   \item[5. Verificar a qualidade do software] - Garantir que o software atenda
+   aos padrões de qualidade da organização.
+   \item[6. Controlar as mudanças de software] - Gerenciar as mudanças de
+   software, usando um sistema de gerenciamento de mudanças e procedimentos e
+   ferramentas de gerenciamento de configuração.
+\end{description}
+
+A separação em perpectivas visa dar uma abordagem mais didática, mas o comum é
+que elas sejam visualizadas sob uma única ótica, ou seja, na prática as
+perspectivas estão sobrepostas conforme Figura \ref{graficodasbaleias}.
+
+\begin{figure}[ht!]
+   \centering
+   \includegraphics[width=90mm]{graficodasbaleias.jpg}
+   \caption{Disciplinas vs Fases}
+   \label{graficodasbaleias}
+\end{figure}
+
+Essa visão de duas dimensões, para fases e disciplinas, foi uma grande evolução
+na forma de desenvolver software, pois enquanto este visa entregar um produto de
+trabalho, um artefato, aquele busca atingir um objetivo de desenvolvimento.
+Apesar de parecer pouco isso foi uma mudança significativa na forma de escrever
+software. O PU proporcionou também um modelo flexível e adaptável que foi base
+para muitos outros.
 
 \subsection{MPDFT-UP}
 
