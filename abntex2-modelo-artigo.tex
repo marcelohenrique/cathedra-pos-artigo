@@ -209,18 +209,18 @@
 \section{Processo Unificado}
 
 Um processo de software é um conjunto de atividades que leva à produção de um
-produto de software \cite{sommerville2007}. O Processo Unificado (PU) para
-desenvolvimento de software surgiu como uma alternativa ao já reconhecidamente
-ineficiente modelo sequencial ou em cascata. O modelo em cascata foi o primeiro
-a ser publicado e teve forte influência dos processos mais gerais de engenharia de
-sistema \cite{sommerville2007}. Esse modelo (cascata) caracteriza-se pelo
-encadeamento das fases e pelo fato da fase seguinte não iniciar antes da atual
-ter terminado. Alguns estudos de sucesso/falha mostram que projetos que
-utilizaram o modelo em cascata obtiveram alta taxa de falha. Acredita-se que
-esse modelo ganhou forte adoção baseado em boatos e crenças ao longo dos anos
-\cite{larman2007utilizando}.
+produto de software \cite{sommerville2007}. O Processo Unificado (PU)
+\cite{jacobson1999unified} para desenvolvimento de software surgiu como uma
+alternativa ao já reconhecidamente ineficiente modelo sequencial ou em cascata.
+O modelo em cascata foi o primeiro a ser publicado e teve forte influência dos
+processos mais gerais de engenharia de sistema \cite{sommerville2007}. Esse
+modelo (cascata) caracteriza-se pelo encadeamento das fases e pelo fato da fase
+seguinte não iniciar antes da atual ter terminado. Alguns estudos de
+sucesso/falha mostram que projetos que utilizaram o modelo em cascata obtiveram
+alta taxa de falha. Acredita-se que esse modelo ganhou forte adoção baseado em
+boatos e crenças ao longo dos anos \cite{larman2007utilizando}.
 
-Já o Processo Unificado (PU) \cite{jacobson1999unified} é fortemente baseado em um modelo
+Já o Processo Unificado é fortemente baseado em um modelo
 iterativo e incremental. Esse modelo se mostrou mais eficiente em situações que os
 requisitos não estão completamente definidos e a entrega de resultados deve ser
 antecipada o máximo possível, além de reduzir a quantidade de defeitos.
@@ -229,7 +229,41 @@ iterativo e evolutivo considera normal que a fase de desenvolvimento comece
 antes dos requisitos terem sido definidos em detalhes; a realimentação é usada
 para esclarecer e aperfeiçoar as especificações em evolução.
 
-Visando facilidade de
+Para fornecer um melhor entendimento sobre o Processo Unificado é comum
+dividi-lo em três perspectivas \cite{sommerville2007}:
+
+\begin{enumerate}
+   \item Uma perspectiva dinâmica, que mostra as fases do modelo ao longo do
+   tempo.
+   \item Uma perspectiva  estática, que mostra as atividades realizadas no
+   processo.
+   \item Uma perspectiva prática, que sugere as boas práticas a serem usadas
+   durante o processo.
+\end{enumerate}
+
+Conforme citado anteriormente, o Processo Unificado, assim como o modelo
+tradicional e vários outros modelos, define um conjunto de fases a serem
+seguidas. As quatro principais fases são:
+
+\begin{description}
+   \item[1. Concepção] - O objetivo da fase de concepção é estabelecer um
+   \textit{business case} para o sistema.
+   \item[2. Elaboração] Os objetivos da fase de elaboração são desenvolver um
+   entendimento do domínio do problema, estabelecer um framework de arquitetura
+   para o sistema, desenvolver o plano de projeto e identificar os riscos
+   principais do projeto.
+   \item[3. Construção] A fase de construção está essencialmente relacionada ao
+   projeto, programação e teste de sistema.
+   \item[4. Transição] A fase final do PU está relacionada à transferência do
+   sistema da comunidade de desenvolvimento para a comunidade dos usuários e com
+   a entrada do sistema em funcionamento no ambiente real.
+\end{description}
+
+Apesar de se parecer um pouco com o modelo cascata as fases do PU não coincidem
+com as atividades do processo e estão mais estritamente ligadas ao negócio do
+que a assuntos técnicos \cite{sommerville2007}. Outra característica marcante
+da estrutura de fases do PU é que elas podem se sobrepor ao longo do
+desenvolvimento, enquanto no modelo tradicional uma fase não inicia antes da finalização da fase atual.
 
 Colocar referências do Larman.
 
