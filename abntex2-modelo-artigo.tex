@@ -329,13 +329,16 @@ sistemas \cite{sommerville2007}. São seis:
 
 A separação em perpectivas visa dar uma abordagem mais didática, mas o comum é
 que elas sejam visualizadas sob uma única ótica, ou seja, na prática as
-perspectivas estão sobrepostas conforme Figura \ref{graficodasbaleias}.
+perspectivas estão sobrepostas conforme \autoref{graficodasbaleias}.
 
-\begin{figure}[ht!]
-   \centering
-   \includegraphics[width=90mm]{graficodasbaleias.jpg}
-   \caption{Processo Unificado: Disciplinas vs Fases}
+
+\begin{figure}[htb]
+   \caption{Processo Unificado: Disciplinas vs Fases.}
    \label{graficodasbaleias}
+   \begin{center}
+       \includegraphics[scale=0.8]{graficodasbaleias.jpg}
+   \end{center}
+   \fonte{http://www.sutilab.com/cc/?aula=41}
 \end{figure}
 
 Essa visão de duas dimensões, para fases e disciplinas, foi uma grande evolução
@@ -541,6 +544,18 @@ gerenciamento dos projetos.
 %    \item[Sprint Retrospective]
 % \end{description}
 
+O Scrum segue um ciclo de desenvolvimento bem definido, conforme pode ser
+visualizado na \autoref{ciclo-de-vida-scrum}.
+
+\begin{figure}[htb]
+   \caption{Ciclo de Vida do Scrum.}
+   \label{ciclo-de-vida-scrum}
+   \begin{center}
+       \includegraphics[scale=0.4]{ciclodevidascrum.png}
+   \end{center}
+   \fonte{http://www.semeru.com.br/blog/category/daily-scrum-meeting/}
+\end{figure}
+
 % \subsection{Kanban}
 
 % \subsection{Lean}
@@ -599,23 +614,20 @@ processos responsáveis pela organização do fluxo de trabalho.
    \item Avaliação
 \end{enumerate}
 
-A seguir a Figura \autoref{figura-processo-mpdft-up} que desenha o fluxo de trabalho macro do processo.
+Apesar de existirem oito etapas somente seis estão detalhadas na documentação do
+MPDFT-UP \cite{mpdft-up}. A etapa de entendimento inicial e de avaliação não são
+detalhadas. Na \autoref{figura-processo-mpdft-up} é possível visualizar o fluxo
+de trabalho macro do processo. Além das etapas anteriores alguns papéis também
+foram definidos na Tabela \autoref{tabela-papeis-mpdft-up}.
 
 \begin{figure}[htb]
    \caption{Fluxo de trabalho do MPDFT-UP.}
    \label{figura-processo-mpdft-up}
    \begin{center}
-       \includegraphics[scale=0.5]{MPDFT-UP_BFB966A8_bfb966a8_Activity.jpeg}
+       \includegraphics[scale=0.45]{MPDFT-UP_BFB966A8_bfb966a8_Activity.jpeg}
    \end{center}
    \fonte{\citeonline{mpdft-up}}
 \end{figure}
-
-Apesar de existirem oito etapas somente seis estão detalhadas na documentação do
-MPDFT-UP \cite{mpdft-up}. A etapa de entendimento inicial e de avaliação não
-detalhadas.
-
-Além das etapas anteriores alguns papéis também foram definidos na Tabela
-\autoref{tabela-papeis-mpdft-up}.
 
 \begin{table}[htb]
 \IBGEtab{
@@ -647,6 +659,35 @@ Além das etapas anteriores alguns papéis também foram definidos na Tabela
    \fonte{Produzido pelo autor.}
 }
 \end{table}
+
+\section{Avaliação}
+
+Este artigo tem por objetivo avaliar se a metodologia de desenvolvimento de
+software do Ministério Público do Distrito Federal de Territórios está sendo
+eficiente e eficaz. Os pontos a serem avaliados foram identificados através de
+uma pesquisa \textit{in loco} e da observação das atividades diárias envolvendo
+desenvolvimento de software.
+
+\subsection{Problemas Identificados}
+
+\subsubsection{Falta de Domínio do Processo}
+
+Um dos pontos críticos identificados é justamente a falta de conhecimento
+adequado sobre o processo do órgão. Antes de tecer qualquer comentário sobre as
+várias situações analisadas, esta é de longe a mais significativa. A maioria dos
+servidores sabem da existência do MPDFT-UP, mas seguer conhecem as etapas do
+processo. Quase todo a aplicação do processo de desenvolvimento é feita por meio
+de orientação dos servidores mais antigos. Isso é extremamente problemático,
+pois problemas tratados no fluxo do processo não são eliminados, além de serem
+incluídos vícios no trabalho diário. Um exemplo é a fase de requisitos que tem
+como  O processo não é seguido por não haver interesse, os integrantes das
+equipes de desenvolvimento não são incentivados ao uso.
+
+\subsection{Sugestões}
+
+\subsubsection{Capacitação no Processo}
+
+
 
 \subsection{Abordagens Ágeis no MPDFT}
 
