@@ -76,6 +76,7 @@
 
 \usepackage{color}
 \usepackage{multirow}
+\usepackage[table]{xcolor}
 % ---
 
 % ---
@@ -675,34 +676,178 @@ desenvolvimento de software.
 Um dos pontos críticos identificados é justamente a falta de conhecimento
 adequado sobre o processo do órgão. Antes de tecer qualquer comentário sobre as
 várias situações analisadas, esta é de longe a mais significativa. A maioria dos
-servidores sabem da existência do MPDFT-UP, mas seguer conhecem as etapas do
-processo. Quase todo a aplicação do processo de desenvolvimento é feita por meio
-de orientação dos servidores mais antigos. Isso é extremamente problemático,
-pois problemas tratados no fluxo do processo não são eliminados, além de serem
-incluídos vícios no trabalho diário. Um exemplo é a fase de requisitos que tem
-como  O processo não é seguido por não haver interesse, os integrantes das
-equipes de desenvolvimento não são incentivados ao uso.
+envolvidos sabem da existência do MPDFT-UP, mas seguer conhecem as etapas do
+processo. Quase toda a aplicação do processo de desenvolvimento é feita por meio
+de orientação dos integrantes mais antigos. Isso é extremamente problemático,
+pois situações tratadas no fluxo do processo não são eliminados, além de serem
+incluídos vícios no trabalho diário. Não é que o processo não é seguido por
+falta de interesse, os integrantes das equipes de desenvolvimento não são
+incentivados ao uso.
 
-\subsection{Sugestões}
+\subsubsection{Estrutura Organizacional}
 
-\subsubsection{Capacitação no Processo}
+A cultura, o estilo e a estrutura organizacional influenciam a maneira como os
+projetos são executados \cite[pag. 30]{pmi2008pmbok}. A estrutura organizacional
+do MPDFT pode ser considerada mista, mas mantém características mais funcionais
+do que projetizadas. Assim, várias dificuldades das organizações matriciais
+fracas ou funcionais surgem. Torna-se dificil de prever e acompanhar o ciclo de
+vida do software uma vez que cada setor tem prioridades próprias. A comunicação
+entre os setores é prejudicada, pois cada setor é uma caixa preta onde é muito
+difícil obter informações precisas.
 
+\subsubsection{Diferenças nos Processos}
 
+Haver diferenças entre os processos não implica necessariamente em problemas,
+ajustes podem ser feitos para melhor adequar um processo ao órgão.Conforme
+citado por \citeonline{larman2007utilizando}, o PU é completamente adaptável e
+aberto a boas práticas de outros metodos. A introdução do PU não visa diminuir o
+valor desses outros métodos - muito pelo contrário \cite{larman2007utilizando}.
+Contudo, os ajustes feitos no processo do MPDFT acabaram ofuscando alguns
+procedimentos. Das nove disciplinas originais do Processo Unificado, somente
+cinco são contempladas explicitamente no MPDFT-UP conforme
+\autoref{tabela-disciplinas-pu-vs-mpdft-up}. Disciplinas importantíssimas são
+tratadas de maneira reduzida dentro de outras etapas do processo do órgão.
 
-\subsection{Abordagens Ágeis no MPDFT}
+\begin{table}[htb]
+\IBGEtab{
+   \caption{Disciplinas: Processo Unificado vs MPDFT-UP.}
+   \label{tabela-disciplinas-pu-vs-mpdft-up}
+}{
+\begin{tabular}{| c | c |}
+   \hline
+   Processo Unificado \cellcolor[gray]{0.9} & MPDFT-UP \cellcolor[gray]{0.9} \\
+   \hline
+   Modelagem de negócios & - \\
+   \hline
+   - & Entendimento inicial \\
+   \hline
+   Requisitos & Levantamento e análise de requisitos \\
+   \hline
+   Análise e projeto & - \\
+   \hline
+   Implementação & Implementação e manutenção \\
+   \hline
+   Teste & Testes \\
+   \hline
+   - & Homologação \\
+   \hline
+   Implantação & Treinamento e implantação \\
+   \hline
+   - & Avaliação \\
+   \hline
+   Gestão de configuração e mudança & - \\
+   \hline
+   Gerência de projeto & Planejamento e gerência de projeto \\
+   \hline
+   Ambiente & - \\
+   \hline
+\end{tabular}
+}{
+   \fonte{Produzido pelo autor.}
+}
+\end{table}
 
-   Falta de comprometimento do Product Owner. Em geral, os POs não estão
-   interessados ou não têm tempo para lidar com as responsabilidades do papel.
-   As dificuldades com a estrutura organizacional. Como o modelo de gestão é
-   mais voltado para uma organização matricial, há dificuldades no
-   gerenciamento de projetos utilizando técnicas ágeis.
+A modelagem de negócio, que é uma disciplina do PU, foi em parte absorvida
+pela etapa de levantamento e análise de requisitos do MPDFT-UP. A etapa de
+entendimento inicial não é bem detalhada na documentação existente, mas
+infere-se que esteja mais relacionada a requisitos. A etapa de implementação e
+manutenção do MPDFT-UP é a que mais absorveu as atividades de análise e projeto,
+contudo a análise e o projeto de software propriamente ditos não são citados
+explicitamente no processo do órgão, somente o desenvolvimento da arquitetura, o
+projeto do banco de dados e a prototipação são citadas. A homologação é a etapa
+do processo do MPDFT que é responsável por obter a aceitação formal por parte do
+usuário gestor e não possui equivalente no PU. A disciplina de gestão de
+configuração e mudança é uma das mais afetadas pela estrutura de processos do
+MPDFT, essa disciplina não existe diretamente no MPDFT-UP, mas em alguns
+momentos é citada em outras etapas. Por exemplo, na etapa de homologação é
+realizado o teste de homologação junto ao usuário gestor e caso seja encontrado
+algum problema é feita uma solicitação de mudança. Logo, deve haver algum
+mecanismo previsto para gerenciar as solicitações de mudança. Por fim, a
+disciplina de ambiente é outra que no dia a dia do órgão não é tão problemática,
+mas para a área de desenvolvimento é bastante negligenciada. Há pouca
+padronização de ferramentas, frameworks e APIs utilizadas. Essas poucas não
+estão corretamente documentadas, estão guardadas nas cabeças de algumas pessoas,
+o que dificulta a disseminação do conhecimento sobre o que deve ser utilizado em
+ cada situação.
 
-\section{Modelo Híbrido}
+\subsubsection{Dificuldades nas Abordagens Ágeis}
 
-Conforme citado por \citeonline{larman2007utilizando}, o PU é completamente
-adaptável e aberto a boas práticas de outros metodos. A introdução do PU não
-visa diminuir o valor desses outros métodos - muito pelo contrário
-\cite{larman2007utilizando}.
+Há ainda algumas tentativas tímidas, porém com enorme potencial, de abordagens
+agilistas em meio aos processos de desenvolvimento de software do órgão. Há
+algumas equipes utilizando, de maneira experimental, Scrum e Kanban. Além de
+tentativas de adotar práticas do XP como a integração contínua. Contudo, novos
+problemas trazem novas dificuldades e uma das mais críticas em relação às
+abordagens ágeis é a falta de comprometimento do cliente. Conforme explicado
+anteriormente, um dos fatores cruciais para o sucesso de metodologias ágeis é o
+envolvimento do cliente e isso não é, em regra, respeitado no MPDFT. No
+Ministério Público do Distrito Federal e Territórios a atividade fim está
+relacionada à fiscalização da aplicação da Lei. Logo, os membros, oriundos da
+área de direito, são o topo da cadeia. Eles nem sempre estão interessados nas
+técnicas, tecnologias, metodologias, e etapas necessárias para a construção de
+um sistema. Portanto, é muito difícil contar com a disponibilidade do maior
+interessado no trabalho final. Isso por si só já é um fator que pesa bastante na
+adoção de várias práticas agilista, mas o envolvimento do cliente é crucial para
+qualquer abordagem e não é por isso que o desenvolvimento de software deve
+parar. Como relatado anteriormente, a estrutura organizacional, que influencia
+na organização das equipes, também dificulta abordagens ágeis mais eficientes
+uma vez que o modelo adotado é mais voltado para uma organização funcional do
+que projetizada. \textcolor{red}{VERIFICAR FONTE PARA ARGUMENTAR QUE
+METODOLOGIAS ÁGEIS TENDEM A SER MAIS PROJETIZADAS.}
+
+\subsection{Sugestões e Melhorias}
+
+\subsubsection{Capacitação do Integrantes}
+
+Já que existe um processo bem definido e uma fase de integração ou ambientação
+dos novos integrantes do órgão, uma das ações tomadas pode ser a inclusão de
+treinamentos não só no processo, mas nas tecnologias que serão utilizadas,
+sistemas a serem mantidos etc. A inclusão de um treinamento é fundamental para a
+posterior cobrança por parte dos membros das equipes de desenvolvimento.
+
+\subsubsection{Organização Projetizada}
+
+Ao se escolher o tipo de estrutura organizacional se está, na verdade,
+priorizando o que será mantido. Uma estrutura funcional prioriza os produtos, já
+uma estrutura projetizadas prioriza o desenvolvimento de projetos
+\cite{larson:1999:IEEE}. Como há muitos projetos novos sendo desenvolvidos e
+outros esperando na fila para desenvolvimento futuro, priorizar o andamento dos
+projetos existentes é fundamental. A diminuição de gargalos e melhorias no
+processo passam necessariamente por uma reestruturação das equipes e da forma de
+trabalho atual.
+
+\subsubsection{Melhorias no Processo}
+
+Primeiro, a modelagem de negócio é uma disciplina que pode ser muito bem
+empregada no entendimento do negócio atual do cliente, que é a área fim do
+MPDFT.
+
+A disciplina de análise e projeto realmente pode continuar fazendo parte da
+implementação, principalmente, com a adoção mais agressiva de metodologias
+ágeis.
+
+Deve haver uma sintonia maior entre as áreas de implementação e teste, o
+trabalho entre os responsáveis pelas duas disciplinas pode acontecer de uma
+forma mais adequada para a produtividade. A implementação pode ter como saída
+código coberto por testes e os responsáveis pela disciplina de teste pode
+fornecer o roteiro de teste das funcionalidades desenvolvidas. Assim, as duas
+áreas ganham, a implementação por conseguir cobrir cenários não planejados e
+enviar uma funcionalidade mais robusta para os responsáveis pelo teste e o teste
+por receber algo mais maduro e, eventualmente, até com testes automatizados.
+
+Treinamento e implantação, principalmente em se tratando de implantação, há
+pouca documentação sobre os ambientes de desenvolvimento, teste, homologação e
+produção. Pouca documentação sobre passos a serem seguidos para publicar
+corretamente uma aplicação em outro ambiente, formato de e-mail de liberação de
+versaão etc.
+
+As disciplinas de gestão de configuração e mudança e ambiente, que não estão
+presentes no MPDFT-UP deveriam ganhar mais espaço, principalmente, por serem
+disciplinas de apoio, ou seja, trabalham em prol de todo o processo. Uma
+política de gestão de configuração minimizaria o tempo de aprendizado de um novo
+integrante, já que ele não vai precisar aprender a forma que uma nova equipe faz
+controle de código. A padronização do que é armazenado em controle de versão e
+estrutura de diretórios também é importante. Para ambiente, é bom estar escrito
+qual versão das ferramentas são utilizadas no órgão.
 
 Limites bem definidos entre os modelos de processos é algo muito bom do ponto de
 vista didático, mas, no mundo prático, é inviável se utilizar somente de um
@@ -714,12 +859,28 @@ dos processso de software, no qual a diversidade de processos de software ao
 longo da organização é reduzida \cite{sommerville2007}. Isso visa melhorias na
 comunicação e redução na curva de aprendizado de novos colaboradores.
 
-Uma vez que o Processo Unificado é bastante flexível e aberto é incentivada a
-inclusão de práticas interessantes de outros métodos iterativos tais como:
-eXtreming Programming (XP) \cite{Beck:1999:ECE:619045.621348}, Scrum
-\cite{schwaber2002agile}
+Tendo em vista que o Processo Unificado é bastante flexível e aberto é
+incentivada a inclusão de práticas interessantes de outros métodos iterativos
+tais como: eXtreming Programming (XP) \cite{Beck:1999:ECE:619045.621348}, Scrum
+\cite{schwaber2002agile}. Assim, é possível obter vantagem dos dois mundos.
 
-\section{Recomendações}
+\subsubsection{Revisões Periódicas}
+
+Outra melhoria que pode ser feita no processo é a revisão periódica do próprio
+processo, das tecnologias e das práticas adotadas. Muito do que é utilizado
+atualmente no MPDFT é defasado tecnologicamente. Tanto em termos procedimentais
+quanto tecnológicos.
+
+% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
+% ---
+\bookmarksetup{startatroot}% 
+% ---
+
+% ---
+% Conclusão
+% ---
+\section*{Considerações finais}
+\addcontentsline{toc}{section}{Considerações finais}
 
 Grande parte dos problemas relacionados à utilização do Processo Unificado como
 base para o desenvolvimento/manutenção de software se deve a tentativa de tornar
@@ -736,8 +897,7 @@ processo é pesado e, portanto, burocrático.
 
 
 
-Apoio à projetização
-do órgão.
+Apoio à projetização do órgão.
 
 Melhorias na gestão de configuração: políticas de controle de versão e estilo de
 código.
@@ -754,16 +914,15 @@ Definições de tecnologias e arquitetura.
 Melhorias no processo de arquitetura. Incluir prova de conceito no fluxo dos
 projetos.
 
-% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
-% ---
-\bookmarksetup{startatroot}% 
-% ---
 
-% ---
-% Conclusão
-% ---
-\section*{Considerações finais}
-\addcontentsline{toc}{section}{Considerações finais}
+
+
+
+
+
+
+
+
 
 Adotar de maneira mais direta as outras disciplinas do PU.
 
