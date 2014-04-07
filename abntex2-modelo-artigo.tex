@@ -99,7 +99,8 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Uma Visão Ágil sobre o Processo de Desenvolvimento de Software do MPDFT}
+\titulo{Uma Visão Crítica sobre o Processo de Desenvolvimento de Software do
+MPDFT}
 \autor{Marcelo Henrique de Oliveira Lima}
 \data{2014}
 \instituicao{Pós-Graduação em Gestão de TI na Administração Pública}
@@ -184,7 +185,16 @@
 % resumo em português
 \begin{resumoumacoluna}
 
-   \textcolor{red}{ESCREVER RESUMO!!!}
+   Os processos de desenvolvimento de software estão em constante evolução e,
+   geralmente, trazem melhorias para o dia a dia dos envolvidos com essa
+   atividade. As melhorias entram nos processos de software das organizações
+   através de avaliações periódicas dos seus modelos. Com o mundo ágil ganhando
+   cada vez mais espaço, modelos considerados pesados precisam se adaptar às
+   novas abordagens para continuarem competitivos. O processo de desenvolvimento
+   do Ministério Público do Distrito Federal e Territórios não é diferente e
+   este artigo faz justamente isso, uma avaliação do processo atual. Problemas
+   são detectados e sugestões são feitas para eliminar ou minimizar esses
+   problemas.
 
    \vspace{\onelineskip}
 
@@ -216,14 +226,14 @@ programação estruturada dava forma ao desenvolvimento de software. Com o adven
 da programação orientada a objetos tudo mudou mais uma vez e as técnicas tiveram
 que evoluir e se adaptar ao novo paradigma.
 
-Com o mundo orientado a objetos surgiram processos cada vez mais robustos de
+Com o mundo orientado a objetos, surgiram processos cada vez mais robustos de
 desenvolvimento de software, o que culminou no mais conhecido processo de
-desenvolvimento orientado a objetos, o \textit{Rational Unified Process} (RUP).
-A partir do RUP surgiu o Processo Unificado (PU) que mais tarde foi taxado de
-processo pesado com o surgimento das técnicas ágeis. Os responsáveis pelo
-desenvolvimento dos métodos ágeis buscavam simplicidade e eficiência. Como o
-próprio manifesto ágil diz, eles estão ``descobrindo maneiras melhores de
-desenvolver software'' \cite{agilemanifesto}.
+desenvolvimento orientado a objetos, o \textit{Rational Unified Process} (RUP)
+\cite{kruchten2004rational}. A partir do RUP surgiu o Processo Unificado (PU)
+que mais tarde foi taxado de processo pesado com o surgimento das metodologias
+ágeis. Os responsáveis pelo desenvolvimento dos métodos ágeis buscavam
+simplicidade e eficiência. Como o próprio manifesto ágil diz, eles estão
+``descobrindo maneiras melhores de desenvolver software'' \cite{agilemanifesto}.
 
 Com essa nova abordagem no desenvolvimento de software, o profissionalismo, a
 melhora nos processos, as avaliações de qualidade dos processos como CMM e
@@ -241,26 +251,25 @@ algumas novas técnicas que estão sendo introduzidas aos poucos no órgão. É 
 também um comparativo com o Processo Unificado e com metodologias ágeis e suas
 práticas.
 
-Na \autoref{processo-unificado} é detalhado o Processo Unificado (PU) que foi
-derivado do Processo Unificado da Rational (\textit{Rational Unified Process -
-RUP}). Na \autoref{metodos-ageis} é feita uma introdução ao universo ágil, é
-explicado o que vem a ser o manifesto ágil, a metodologia de gerenciamento de
-projetos ágeis Scrum e a metodologia de desenvolvimento de software ágil
-\textit{eXtreme Programming} (XP). O MPDFT é introduzido rapidamente assim como
-o MPDFT-UP, que é o processo de desenvolvimento utilizado no órgão, na
-\autoref{mpdft}. A avaliação que é objetivo deste artigo encontra-se na
-\autoref{avaliacao}, bem como um detalhamento dos problemas encontrados e
-algumas sugestões de melhorias para os problemas encontrados. Por fim, são
-feitas as considerações finais.
+Este artigo segue a seguinte estrutura, na \autoref{processo-unificado} é
+detalhado o Processo Unificado (PU) que foi derivado do RUP. Na
+\autoref{metodos-ageis} é feita uma introdução ao universo ágil, é explicado o
+que vem a ser o manifesto ágil, a metodologia de gerenciamento de projetos ágeis
+Scrum e a metodologia de desenvolvimento de software ágil \textit{eXtreme
+Programming} (XP). O MPDFT é introduzido rapidamente assim como o MPDFT-UP, que
+é o processo de desenvolvimento utilizado no órgão na \autoref{mpdft}. A
+avaliação que é objetivo deste artigo encontra-se na \autoref{avaliacao}, bem
+como um detalhamento dos problemas encontrados e algumas sugestões de melhorias
+para os problemas encontrados. Por fim, são feitas as considerações finais.
 
 \section{Processo Unificado}
 
 \label{processo-unificado}
 
 Um processo de software é um conjunto de atividades que leva à produção de um
-produto de software \cite{sommerville2007}. O Processo Unificado (PU)
-\cite{jacobson1999unified} para desenvolvimento de software surgiu como uma
-alternativa ao já reconhecidamente ineficiente modelo sequencial ou em cascata.
+produto de software \cite{sommerville2007}. O Processo Unificado (PU) para
+desenvolvimento de software surgiu como uma alternativa ao já reconhecidamente
+ineficiente modelo sequencial ou em cascata \cite{jacobson1999unified}.
 O modelo em cascata foi o primeiro a ser publicado e teve forte influência dos
 processos mais gerais de engenharia de sistema \cite{sommerville2007}. Esse
 modelo (cascata) caracteriza-se pelo encadeamento das fases e pelo fato da fase
@@ -297,13 +306,13 @@ seguidas. As quatro principais fases são:
 \begin{description}
    \item[1. Concepção] - O objetivo da fase de concepção é estabelecer um
    \textit{business case} para o sistema.
-   \item[2. Elaboração] Os objetivos da fase de elaboração são desenvolver um
+   \item[2. Elaboração] - Os objetivos da fase de elaboração são desenvolver um
    entendimento do domínio do problema, estabelecer um framework de arquitetura
    para o sistema, desenvolver o plano de projeto e identificar os riscos
    principais do projeto.
-   \item[3. Construção] A fase de construção está essencialmente relacionada ao
-   projeto, programação e teste de sistema.
-   \item[4. Transição] A fase final do PU está relacionada à transferência do
+   \item[3. Construção] - A fase de construção está essencialmente relacionada
+   ao projeto, programação e teste de sistema.
+   \item[4. Transição] - A fase final do PU está relacionada à transferência do
    sistema da comunidade de desenvolvimento para a comunidade dos usuários e com
    a entrada do sistema em funcionamento no ambiente real.
 \end{description}
@@ -318,11 +327,11 @@ finalização da fase atual.
 Outra perspectiva, a estática, é organizada em disciplinas ou fluxos de trabalho
 (\textit{workflows}). Uma disciplina é uma sequência de atividades que produz um
 resultado de valor observável \cite{Corporation1998}. Por isso a disciplina é a
-parte do processo responsável por uma das quatro perguntas básicas de um
-processo (quem, o quê, como e quando), o quando. É a disciplina que faz com que
-as outras perguntas sejam respondidas no momento adequado do ciclo de vida do
-processo. O PU possui nove disciplinas núcleo, seis agrupadas com o título de
-engenharia e outras três sob o título de suporte.
+parte responsável por uma das quatro perguntas básicas de um processo (quem, o
+quê, como e quando), o quando. É a disciplina que faz com que as outras
+perguntas sejam respondidas no momento adequado do ciclo de vida do processo. O
+PU possui nove disciplinas núcleo, seis agrupadas com o título de engenharia e
+outras três sob o título de suporte.
 
 \textbf{Disciplinas de Engenharia}
 
@@ -407,7 +416,7 @@ ser desenvolvido, o foco em artefatos que não necessariamente agregam valor,
 todos esses fatores foram motivos para a migração que levou a outro extremo, a
 redução brusca da burocracia. Isso fez com que esse grupo de desenvolvedores
 se reunissem e elaborassem uma séries de princípios a serem seguidos. Eles são
-conhecidos com os doze princípios do software ágil \cite{agilemanifesto}.
+conhecidos como os doze princípios do software ágil \cite{agilemanifesto}.
 
 \begin{enumerate}
    \item Nossa maior prioridade é satisfazer o cliente através da entrega
@@ -461,17 +470,18 @@ Essa foi praticamente a base para todas as metodologias consideradas ágeis
 atualmente. Todas tentam de maneiras diferentes fornecer os valores que foram
 definidos no manifesto ágil.
 
-\subsection{XP}
+\subsection{\textit{eXtreme Programming} - XP}
 
 Um dos responsáveis pela revolução ágil foi Kent Beck, ao escrever o livro
-Extreme Programming Explained em 1999. Ele publicou a provavelmente mais famosa
-metodologia ágil até hoje, a Programação Extrema (Extreme Programming - XP)
-\cite{Beck:1999:ECE:619045.621348}. Seguindo o entendimento que a sociedade
-define valores para si mesma que conflitam com valores individuais, pois o que é
-pensado de forma coletiva, em geral, priva as pessoas de certas liberdades. A XP
-seguiu esse mesmo entendimento, que são necessários valores para indicar se o
-que está sendo feito é para um bem comum ou por interesses individuais. Surgiram
-então os valores da Extreme Programming.
+\textit{Extreme Programming Explained} em 1999. Ele publicou a provavelmente
+mais famosa metodologia ágil até hoje, a Programação Extrema (\textit{eXtreme
+Programming} - XP) \cite{Beck:1999:ECE:619045.621348}. Seguindo o entendimento
+que a sociedade define valores para si mesma que conflitam com valores
+individuais, pois o que é pensado de forma coletiva, em geral, priva as pessoas
+de certas liberdades. A XP seguiu esse mesmo entendimento, que são necessários
+valores para indicar se o que está sendo feito é para um bem comum ou por
+interesses individuais. Surgiram então os valores da \textit{eXtreme
+Programming}.
 
 % \textbf{Valores do XP}
 
@@ -483,18 +493,18 @@ então os valores da Extreme Programming.
    \item Respeito
 \end{enumerate}
 
-Na primeira edição do livro citado somente os quatro primeiro valores foram
-citados, só na segunda edição é que o respeito foi introduzido, pois foi
+Na primeira edição do livro citado somente os quatro primeiro valores da XP
+foram descritos, só na segunda edição é que o respeito foi introduzido, pois foi
 percebido que ele é um valor que está permeando os outros e é fundamental para
 o sucesso do projeto \cite{beck2000extreme}.
 
 O fato dos valores serem preservados ao longo do desenvolvimento é um bom
 indicativo de sucesso. No entanto, os valores eram muito vagos e foi necessário
-atacar de uma forma mais concreta, sugiram então as práticas. O XP possui um
+atacar de uma forma mais concreta, sugiram então as práticas. A XP possui um
 conjunto de práticas ou princípios, que são os principais responsáveis pela
 conformidade com o conceito de desenvolvimento ágil.
 
-\textbf{Princípios ou Práticas do XP}
+\textbf{Princípios ou Práticas da XP}
 
 \begin{description}
    \item[Planejamento incremental] - Os requisitos são registrados em cartões de
@@ -515,8 +525,8 @@ conformidade com o conceito de desenvolvimento ágil.
    \item[Propriedade coletiva] - Os pares de desenvolvedores trabalham em todas
    as áreas do sistema, de tal maneira que não se formem ilhas de conhecimento,
    com todos os desenvolvedores de posse de todo o código.
-   \item[Integração contínua] - Tão logo o trabalho em uma tarefa seja conluído,
-   este é integrado ao sistema como um todo.
+   \item[Integração contínua] - Tão logo o trabalho em uma tarefa seja
+   concluído, este é integrado ao sistema como um todo.
    \item[Ritmo sustentável] - Grandes quantidades de horas extras não são
    consideradas aceitáveis, pois, no médio prazo, há uma redução na qualidade do
    código e na produtividade.
@@ -524,10 +534,10 @@ conformidade com o conceito de desenvolvimento ágil.
    cliente) deve estar disponível em tempo integral para apoiar a equipe de XP.
 \end{description}
 
-Além das práticas o XP ainda define um conjunto de atividades que servem de
+Além das práticas a XP ainda define um conjunto de atividades que servem de
 orientação ao longo do desenvolvimento.
 
-\textbf{Atividades do XP}
+\textbf{Atividades da XP}
 
 \begin{description}
    \item[Programar] - Ao fim do dia deve haver um programa.
@@ -539,7 +549,7 @@ orientação ao longo do desenvolvimento.
    sistema.
 \end{description}
 
-\subsection{Scrum}
+\subsection{\textit{Scrum}}
 
 Por volta de 2001 Ken Schwaber escreveu o livro \textit{Agile Software
 Development with Scrum}, que seria o responsável pela iniciação da metodologia
@@ -559,10 +569,10 @@ gerenciamento do projeto são divididas entre esses três papeis
 \textbf{Papéis do Scrum}
 
 \begin{description}
-   \item[Product Owner] - é o representante de todos os interessados no projeto
-   e o sistema resultante.
-   \item[Time] - é o responsável pelo desenvolvimento das funcionalidades.
-   \item[ScrumMaster] - é o responsável pela correta implementação do processo
+   \item[Product Owner] - É o representante de todos os interessados no projeto
+   e do sistema resultante.
+   \item[Time] - É o responsável pelo desenvolvimento das funcionalidades.
+   \item[ScrumMaster] - É o responsável pela correta implementação do processo
    Scrum.
 \end{description}
 
@@ -577,11 +587,11 @@ gerenciamento dos projetos.
 \textbf{Artefatos do Scrum}
 
 \begin{description}
-   \item[Product Backlog] - é onde estão definidos os requisitos do sistema ou o
+   \item[Product Backlog] - É onde estão definidos os requisitos do sistema ou o
    produto sendo desenvolvido.
-   \item[Sprint Backlog] - define o trabalho, ou tarefas, selecionadas do
+   \item[Sprint Backlog] - Define o trabalho, ou tarefas, selecionadas do
    product backlog a serem implementadas pelo time na próxima Sprint.
-   \item[Burndown Chart] - o gráfico que mostra o conjunto de trabalho restante
+   \item[Burndown Chart] - O gráfico que mostra o conjunto de trabalho restante
    em relação ao tempo.
 \end{description}
 
@@ -623,11 +633,11 @@ definidos na Constituição de 1988 que garantem a independência dos três pode
 instituídos - Executivo, Legislativo e Judiciário - além da independência
 funcional, a indivisibilidade e a unidade \cite{mpdft}.
 
-O Departamento de Tecnologia da Informação (DTI) é o responsável por toda a
-informatização do órgão. Várias equipes cuidam desde contratações envolvendo TI
-até desenvolvimento de soluções de software passando por administração da
-infraestrutura de informática (redes de computadores, banco de dados, segurança
-etc).
+O Departamento de Tecnologia da Informação (DTI) do MPDFT é o responsável por
+toda a informatização do órgão. Várias equipes cuidam desde contratações
+envolvendo TI até desenvolvimento de soluções de software passando por
+administração da infraestrutura de informática (redes de computadores, banco de
+dados, segurança etc).
 
 \subsection{MPDFT-UP}
 
@@ -640,13 +650,13 @@ item 9.1.4 desse acórdão é proposta a utilização de medidas que estimulem a
 adoção de metodologias de desenvolvimento de sistemas.
 
 Sabendo que os processos evoluem para explorar as capacidades das pessoas em uma
-organização e as características específicas do sistemas que estão sendo
+organização e as características específicas dos sistemas que estão sendo
 desenvolvidos \cite{sommerville2007}, o MPDFT-UP foi desenvolvido baseando-se
-no processo unificado e sendo, portanto um processo iterativo e incremental. A
-utilização do processo unificado não é tão crítica em relação a necessidades e
-pressões de mercado, mas, por se tratar de um órgão público, é necessária
-especial atenção à documentação dos sistemas desenvolvidos, formalização de
-demandas, designação de responsáveis pelo desenvolvimento e pelos aceites.
+no Processo Unificado e sendo, portanto um processo iterativo e incremental. A
+utilização do Processo Unificado não é tão crítica em relação a necessidades e
+pressões de mercado, mas por se tratar de um órgão público é necessária especial
+atenção à documentação dos sistemas desenvolvidos, formalização de demandas,
+designação de responsáveis pelo desenvolvimento e pelos aceites.
 
 A Portaria Normativa nº 22 de 2009 é a que regula a metodologia de
 desenvolvimento de sistemas de informação do MPDFT \cite{portaria-22-2009}. O
@@ -729,10 +739,10 @@ desenvolvimento de software.
 Um dos pontos críticos identificados é justamente a falta de conhecimento
 adequado sobre o processo do órgão. Antes de tecer qualquer comentário sobre as
 várias situações analisadas, esta é de longe a mais significativa. A maioria dos
-envolvidos sabem da existência do MPDFT-UP, mas seguer conhecem as etapas do
+envolvidos sabe da existência do MPDFT-UP, mas seguer conhecem as etapas do
 processo. Quase toda a aplicação do processo de desenvolvimento é feita por meio
 de orientação dos integrantes mais antigos. Isso é extremamente problemático,
-pois situações tratadas no fluxo do processo não são eliminados, além de serem
+pois situações tratadas no fluxo do processo não são eliminadas, além de serem
 incluídos vícios no trabalho diário. Não é que o processo não é seguido por
 falta de interesse, os integrantes das equipes de desenvolvimento não são
 incentivados ao uso.
@@ -751,7 +761,7 @@ difícil obter informações precisas.
 \subsubsection{Diferenças nos Processos}
 
 Haver diferenças entre os processos não implica necessariamente em problemas,
-ajustes podem ser feitos para melhor adequar um processo ao órgão.Conforme
+ajustes podem ser feitos para melhor adequar um processo ao órgão. Conforme
 citado por \citeonline{larman2007utilizando}, o PU é completamente adaptável e
 aberto a boas práticas de outros metodos. A introdução do PU não visa diminuir o
 valor desses outros métodos - muito pelo contrário \cite{larman2007utilizando}.
@@ -809,43 +819,44 @@ contudo a análise e o projeto de software propriamente ditos não são citados
 explicitamente no processo do órgão, somente o desenvolvimento da arquitetura, o
 projeto do banco de dados e a prototipação são citadas. A homologação é a etapa
 do processo do MPDFT que é responsável por obter a aceitação formal por parte do
-usuário gestor e não possui equivalente no PU. A disciplina de gestão de
-configuração e mudança é uma das mais afetadas pela estrutura de processos do
-MPDFT, essa disciplina não existe diretamente no MPDFT-UP, mas em alguns
-momentos é citada em outras etapas. Por exemplo, na etapa de homologação é
-realizado o teste de homologação junto ao usuário gestor e caso seja encontrado
-algum problema é feita uma solicitação de mudança. Logo, deve haver algum
-mecanismo previsto para gerenciar as solicitações de mudança. Por fim, a
-disciplina de ambiente é outra que no dia a dia do órgão não é tão problemática,
-mas para a área de desenvolvimento é bastante negligenciada. Há pouca
-padronização de ferramentas, frameworks e APIs utilizadas. Essas poucas não
-estão corretamente documentadas, estão guardadas nas cabeças de algumas pessoas,
-o que dificulta a disseminação do conhecimento sobre o que deve ser utilizado em
- cada situação.
+usuário gestor e não possui equivalente no PU.
+
+A disciplina de gestão de configuração e mudança é uma das mais afetadas pela
+estrutura de processos do MPDFT, essa disciplina não existe diretamente no
+MPDFT-UP, mas em alguns momentos é citada em outras etapas. Por exemplo, na
+etapa de homologação é realizado o teste de homologação junto ao usuário gestor
+e caso seja encontrado algum problema é feita uma solicitação de mudança. Logo,
+deve haver algum mecanismo previsto para gerenciar as solicitações de mudança.
+
+Por fim, a disciplina de ambiente é outra que no dia a dia do órgão não é tão
+problemática, mas para a área de desenvolvimento é bastante negligenciada. Há
+pouca padronização de ferramentas, frameworks e APIs utilizadas. Essas poucas
+não estão corretamente documentadas, estão guardadas nas cabeças de algumas
+pessoas, o que dificulta a disseminação do conhecimento sobre o que deve ser
+utilizado em cada situação.
 
 \subsubsection{Dificuldades nas Abordagens Ágeis}
 
 Há ainda algumas tentativas tímidas, porém com enorme potencial, de abordagens
 agilistas em meio aos processos de desenvolvimento de software do órgão. Há
-algumas equipes utilizando, de maneira experimental, Scrum e Kanban. Além de
-tentativas de adotar práticas do XP como a integração contínua. Contudo, novos
-problemas trazem novas dificuldades e uma das mais críticas em relação às
-abordagens ágeis é a falta de comprometimento do cliente. Conforme explicado
-anteriormente, um dos fatores cruciais para o sucesso de metodologias ágeis é o
-envolvimento do cliente e isso não é, em regra, respeitado no MPDFT. No
-Ministério Público do Distrito Federal e Territórios a atividade fim está
-relacionada à fiscalização da aplicação da Lei. Logo, os membros, oriundos da
-área de direito, são o topo da cadeia. Eles nem sempre estão interessados nas
-técnicas, tecnologias, metodologias, e etapas necessárias para a construção de
-um sistema. Portanto, é muito difícil contar com a disponibilidade do maior
-interessado no trabalho final. Isso por si só já é um fator que pesa bastante na
-adoção de várias práticas agilista, mas o envolvimento do cliente é crucial para
-qualquer abordagem e não é por isso que o desenvolvimento de software deve
-parar. Como relatado anteriormente, a estrutura organizacional, que influencia
-na organização das equipes, também dificulta abordagens ágeis mais eficientes
-uma vez que o modelo adotado é mais voltado para uma organização funcional do
-que projetizada. \textcolor{red}{VERIFICAR FONTE PARA ARGUMENTAR QUE
-METODOLOGIAS ÁGEIS TENDEM A SER MAIS PROJETIZADAS.}
+algumas equipes utilizando, de maneira experimental, \textit{Scrum} e
+\textit{Kanban}. Além de tentativas de adotar práticas do XP como a integração
+contínua. Contudo, novos problemas trazem novas dificuldades e uma das mais
+críticas em relação às abordagens ágeis é a falta de comprometimento do cliente.
+Conforme explicado anteriormente, um dos fatores cruciais para o sucesso de
+metodologias ágeis é o envolvimento do cliente e isso não é, em regra,
+respeitado no MPDFT. No Ministério Público do Distrito Federal e Territórios a
+atividade fim está relacionada à fiscalização da aplicação da Lei. Logo, os
+membros, oriundos da área de direito, são o topo da cadeia. Eles nem sempre
+estão interessados nas técnicas, tecnologias, metodologias, e etapas necessárias
+para a construção de um sistema. Portanto, é muito difícil contar com a
+disponibilidade do maior interessado no trabalho final. Isso por si só já é um
+fator que pesa bastante na adoção de várias práticas agilista, mas o
+envolvimento do cliente é crucial para qualquer abordagem e não é por isso que o
+desenvolvimento de software deve parar. Como relatado anteriormente, a estrutura
+organizacional, que influencia na organização das equipes, também dificulta
+abordagens ágeis mais eficientes uma vez que o modelo adotado é mais voltado
+para uma organização funcional do que projetizada.
 
 \subsection{Sugestões e Melhorias}
 
@@ -891,7 +902,7 @@ Treinamento e implantação, principalmente em se tratando de implantação, há
 pouca documentação sobre os ambientes de desenvolvimento, teste, homologação e
 produção. Pouca documentação sobre passos a serem seguidos para publicar
 corretamente uma aplicação em outro ambiente, formato de e-mail de liberação de
-versaão etc.
+versão etc.
 
 As disciplinas de gestão de configuração e mudança e ambiente, que não estão
 presentes no MPDFT-UP deveriam ganhar mais espaço, principalmente, por serem
@@ -914,7 +925,7 @@ comunicação e redução na curva de aprendizado de novos colaboradores.
 
 Tendo em vista que o Processo Unificado é bastante flexível e aberto é
 incentivada a inclusão de práticas interessantes de outros métodos iterativos
-tais como: eXtreming Programming (XP) \cite{Beck:1999:ECE:619045.621348}, Scrum
+tais como: eXtreming Programming (XP) \cite{Beck:1999:ECE:619045.621348} e Scrum
 \cite{schwaber2002agile}. Assim, é possível obter vantagem dos dois mundos.
 
 \subsubsection{Revisões Periódicas}
@@ -936,7 +947,7 @@ quanto tecnológicos.
 \addcontentsline{toc}{section}{Considerações finais}
 
 Grande parte dos problemas relacionados à utilização do Processo Unificado como
-base para o desenvolvimento/manutenção de software se deve a tentativa de tornar
+base para o desenvolvimento/manutenção de software se deve à tentativa de tornar
 um processo já existente em nível executado e às vezes até definido em outro
 processo. O que geralmente, e erroneamente, leva a equipe da qualidade a forçar
 a utilização de um novo e teoricamente melhor modelo. Assim, em vez de analisar
@@ -950,16 +961,16 @@ pesado e, portanto, burocrático.
 Conforme explicado nas seções anteriores, não há certos ou errados no mundo de
 desenvolvimento de software. É tudo uma questão de adaptação das
 técnicas/práticas no dia a dia. É completamente possível utilizar o Processo
-Unificado de forma ágil e tornar uma metodologia ágil lenta e burocrática.
+Unificado de forma ágil ou tornar uma metodologia ágil lenta e burocrática.
 Portanto, não é necessário mudar completamente o processo de desenvolvimento de
 software do MPDFT, basta adaptá-lo às reais necessidades do órgão.
 
 Ao avaliar os problemas e as sugestões de melhoria será possível evoluir a forma
 de trabalho atual e obter grande retorno por parte dos participantes e do
-próprio processo. Mas, as melhorias não devem parar com este artigo novos
+próprio processo. Mas, as melhorias não devem parar com este artigo, novos
 problemas surgirão e novas soluções serão propostas, pois um processo de
 desenvolvimento de software trata de processos, pessoas e ferramentas, logo, é
-vivo e deve estar em constante evolução.
+algo vivo e deve estar em constante evolução.
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
