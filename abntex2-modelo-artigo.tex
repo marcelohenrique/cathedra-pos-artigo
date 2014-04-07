@@ -206,9 +206,56 @@
 \section*{Introdução}
 \addcontentsline{toc}{section}{Introdução}
 
-\textcolor{red}{ESCREVER INTRODUÇÃO!!!}
+Desde que Gordon Earle Moore, co-fundador e presidente da Intel Corporation,
+profetizou que o número de transistores dos chips dobraria pelo mesmo custo a
+cada dezoito meses vemos uma revolução tecnológica. Atualmente, quase tudo está
+ligado à tecnologia, que faz o mundo se mover cada vez mais rápido. Isso não
+muda para o ambiente de desenvolvimento de software. Essa área vem se
+desenvolvendo e se estruturando desde meados dos anos setenta quando a
+programação estruturada dava forma ao desenvolvimento de software. Com o advento
+da programação orientada a objetos tudo mudou mais uma vez e as técnicas tiveram
+que evoluir e se adaptar ao novo paradigma.
+
+Com o mundo orientado a objetos surgiram processos cada vez mais robustos de
+desenvolvimento de software, o que culminou no mais conhecido processo de
+desenvolvimento orientado a objetos, o \textit{Rational Unified Process} (RUP).
+A partir do RUP surgiu o Processo Unificado (PU) que mais tarde foi taxado de
+processo pesado com o surgimento das técnicas ágeis. Os responsáveis pelo
+desenvolvimento dos métodos ágeis buscavam simplicidade e eficiência. Como o
+próprio manifesto ágil diz, eles estão ``descobrindo maneiras melhores de
+desenvolver software'' \cite{agilemanifesto}.
+
+Com essa nova abordagem no desenvolvimento de software, o profissionalismo, a
+melhora nos processos, as avaliações de qualidade dos processos como CMM e
+MPS.Br, veio a padronização nas organizações. O Governo Federal não ficou de
+fora, o Tribunal de Contas da União (TCU) realizou uma ampla auditoria na Esfera
+Federal e constatou que há muitas falhas na governança de TI
+\cite{dou-20080818}. Com isso, o Ministério Público do Distrito Federal e
+Territórios (MPDFT) foi provocado a se adequar e elaborou seu Processo de
+Desenvolvimento de Software o MPDFT-UP.
+
+O objetivo deste artigo é identificar gargalos, falhas e más práticas no
+processo atual e propor melhorias para essas situações identificadas no
+MPDFT-UP. Para isso, é feito um estudo sobre o modelo de processo atual e sobre
+algumas novas técnicas que estão sendo introduzidas aos poucos no órgão. É feito
+também um comparativo com o Processo Unificado e com metodologias ágeis e suas
+práticas.
+
+Na \autoref{processo-unificado} é detalhado o Processo Unificado (PU) que foi
+derivado do Processo Unificado da Rational (\textit{Rational Unified Process -
+RUP}). Na \autoref{metodos-ageis} é feita uma introdução ao universo ágil, é
+explicado o que vem a ser o manifesto ágil, a metodologia de gerenciamento de
+projetos ágeis Scrum e a metodologia de desenvolvimento de software ágil
+\textit{eXtreme Programming} (XP). O MPDFT é introduzido rapidamente assim como
+o MPDFT-UP, que é o processo de desenvolvimento utilizado no órgão, na
+\autoref{mpdft}. A avaliação que é objetivo deste artigo encontra-se na
+\autoref{avaliacao}, bem como um detalhamento dos problemas encontrados e
+algumas sugestões de melhorias para os problemas encontrados. Por fim, são
+feitas as considerações finais.
 
 \section{Processo Unificado}
+
+\label{processo-unificado}
 
 Um processo de software é um conjunto de atividades que leva à produção de um
 produto de software \cite{sommerville2007}. O Processo Unificado (PU)
@@ -350,6 +397,8 @@ software. O PU proporcionou também um modelo flexível e adaptável que foi bas
 para muitos outros.
 
 \section{Métodos Ágeis}
+
+\label{metodos-ageis}
 
 Por volta da década de 1990 houve um movimento envolvendo desenvolvedores que
 não concordavam com o caminho que estava sendo tomado pelos processos de
@@ -565,6 +614,8 @@ visualizado na \autoref{ciclo-de-vida-scrum}.
 
 \section{MPDFT}
 
+\label{mpdft}
+
 O Ministério Público do Distrito Federal e Territórios (MPDFT) é um dos
 integrantes do Ministério Público da União (MPU). É o responsável pela defesa
 dos direitos dos cidadãos e dos interesses da sociedade. Dotado de poderes
@@ -662,6 +713,8 @@ foram definidos na Tabela \autoref{tabela-papeis-mpdft-up}.
 \end{table}
 
 \section{Avaliação}
+
+\label{avaliacao}
 
 Este artigo tem por objetivo avaliar se a metodologia de desenvolvimento de
 software do Ministério Público do Distrito Federal de Territórios está sendo
@@ -884,64 +937,29 @@ quanto tecnológicos.
 
 Grande parte dos problemas relacionados à utilização do Processo Unificado como
 base para o desenvolvimento/manutenção de software se deve a tentativa de tornar
-um processo já existente em nível executado e às vezes até definido
-\textcolor{red}{COLOCAR REFERÊNCIAS PARA NÍVEIS CMMI?} em outro processo, o que
-geralmente, e erroneamente, leva a equipe da qualidade a forçar a utilização de
-um novo e teoricamente melhor modelo. Assim, em vez de analisar como o software
-é tratado em uma organização e simplesmente documentar, a equipe de qualidade
-tenta sair de algo executado de forma meramente empírica, em muitos casos, para
-algo altamente documentado e, muitas vezes, burocrático. Essa é uma grande
-queixa por parte dos envolvidos no uso do processo (funcionários/colaboradores)
-e um dos principais responsáveis por um dos grandes mitos envolvendo o PU, o
-processo é pesado e, portanto, burocrático.
+um processo já existente em nível executado e às vezes até definido em outro
+processo. O que geralmente, e erroneamente, leva a equipe da qualidade a forçar
+a utilização de um novo e teoricamente melhor modelo. Assim, em vez de analisar
+ como o software é tratado em uma organização e simplesmente documentar, a
+equipe de qualidade tenta sair de algo executado de forma meramente empírica, em
+muitos casos, para algo altamente documentado e, muitas vezes, burocrático. Essa
+é uma grande queixa por parte dos envolvidos no uso do processo e um dos
+principais responsáveis por um dos grandes mitos envolvendo o PU, o processo é
+pesado e, portanto, burocrático.
 
+Conforme explicado nas seções anteriores, não há certos ou errados no mundo de
+desenvolvimento de software. É tudo uma questão de adaptação das
+técnicas/práticas no dia a dia. É completamente possível utilizar o Processo
+Unificado de forma ágil e tornar uma metodologia ágil lenta e burocrática.
+Portanto, não é necessário mudar completamente o processo de desenvolvimento de
+software do MPDFT, basta adaptá-lo às reais necessidades do órgão.
 
-
-Apoio à projetização do órgão.
-
-Melhorias na gestão de configuração: políticas de controle de versão e estilo de
-código.
-
-Melhorias no fluxo do processo: liberar casos de uso para desenvolvimento e
-teste. Posteriormente, liberar o roteiro de teste para o desenvolvimento.
-
-Abordagem mais agilista.
-
-Incentivo ao desenvolvimento  orientado a teste.
-
-Definições de tecnologias e arquitetura.
-
-Melhorias no processo de arquitetura. Incluir prova de conceito no fluxo dos
-projetos.
-
-
-
-
-
-
-
-
-
-
-
-Adotar de maneira mais direta as outras disciplinas do PU.
-
-A gestão de configuração e mudança é fundamental para a padronização do processo
-e redução na curva de aprendizado.
-
-Padronização dos repositórios de projetos. Ex.: gerencia, requisitos, projeto,
-implementação, teste, design etc.
-
-Criação de uma política de gestão de configuração.
-
-Encoding padrão.
-
-Ajustes/melhorias na estrutura organizacional para facilitar a adoção de
-métodos ágeis. Equipes mais projetizadas.
-
-Definição de tecnologias suportadas.
-
-Definições de arquitetura e de uma possível arquitetura de referência.
+Ao avaliar os problemas e as sugestões de melhoria será possível evoluir a forma
+de trabalho atual e obter grande retorno por parte dos participantes e do
+próprio processo. Mas, as melhorias não devem parar com este artigo novos
+problemas surgirão e novas soluções serão propostas, pois um processo de
+desenvolvimento de software trata de processos, pessoas e ferramentas, logo, é
+vivo e deve estar em constante evolução.
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
